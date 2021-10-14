@@ -1,7 +1,7 @@
-Äîìàøíåå çàäàíèå ¹2 ïî ïðåäìåòó ÔËÈÒÀ
-Äóõèí Èâàí Èó4-31Á
-Ôàéë ïðîåêòà connected_graph.sln çàïóñêàåòñÿ íà visual studio 2019
-Ïðîãðàììà ñ÷èòûâàåò êîëè÷åñòâî âåðøèí è ð¸áåð, à ïîòîì ïîëó÷àåò ìàòðèöó èíöèäåíòíîñòè äëÿ ýòîãî ãðàôà
+Домашнее задание №2 по предмету ФЛИТА
+Духин Иван Иу4-31Б
+Файл проекта connected_graph.sln запускается на visual studio 2019
+Программа считывает количество вершин и рёбер, а потом получает матрицу инцидентности для этого графа
 
 ```c
 scanf_s("%d%d", &vertex, &edge);
@@ -29,7 +29,7 @@ scanf_s("%d%d", &vertex, &edge);
 
 ```
 
-âûâîäèò ìàòðèöó èíöèäåíòíîñòè
+выводит матрицу инцидентности
 ```c
 	printf(" ");
 	for (j = 0; j < edge; j++)
@@ -49,7 +49,7 @@ scanf_s("%d%d", &vertex, &edge);
 
 ```
 
-óñòàíàâëèâàåò ÿâëÿòñÿ ëè ýòîò ãðàô ñâÿçàííûì èëè íåò, èñõîäÿ èç ïîëó÷åííîé èíôîðìàöèè
+устанавливает являтся ли этот граф связанным или нет, исходя из полученной информации
 ```c
 bool* connect = (bool*)malloc(vertex * sizeof(bool));
 	*(connect) = true;
@@ -117,7 +117,7 @@ bool* connect = (bool*)malloc(vertex * sizeof(bool));
 	return false;
 }
 ```
-÷åðòèò ãðàô ÷åðåç dot
+чертит граф через dot
 
 ```c
 	FILE* file;
@@ -172,5 +172,4 @@ bool* connect = (bool*)malloc(vertex * sizeof(bool));
 	system("rundll32  \"%ProgramFiles%\\Windows Photo Viewer\\PhotoViewer.dll\", ImageView_Fullscreen C:\\Users\\duhin\\source\\repos\\hm2_connected_graph\\connected_graph\\Dot_file.bmp");
 }
 ```
-
  
