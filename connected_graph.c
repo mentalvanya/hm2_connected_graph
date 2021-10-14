@@ -1,10 +1,8 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #define UNIT 0101
 #include <stdio.h>
-#include <malloc.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
 #include <stdbool.h>
 int vertical_search(int* arr, bool* connect, int n, int m, int j)
 {
@@ -118,7 +116,19 @@ int main(void)
 		exit(1);
 	}
 	fprintf(file, "graph G{\n");
-
+	for (i = 0; i < vertex; i++)
+	{
+		bool simple_dot = true;
+		for (j = 0; j < edge; j++)
+		{
+			if (*(arr + i * edge + j) == 1)
+			{
+				simple_dot = false;
+			}
+		}
+		if(simple_dot)
+			fprintf(file, "%d;\n", (i + 1));
+	}
 	for (j = 0; j < edge; j++)
 	{
 		int dot1 = -1, dot2 = -1;
